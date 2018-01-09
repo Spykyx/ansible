@@ -1,0 +1,24 @@
+[linc-dp]
+wp11 ansible_ssh_host=vps297379.ovh.net
+wp21 ansible_ssh_host=vps297363.ovh.net
+wp12 ansible_ssh_host=vps297364.ovh.net
+wp22 ansible_ssh_host=vps297366.ovh.net
+wp13 ansible_ssh_host=vps297367.ovh.net
+wp23 ansible_ssh_host=vps297369.ovh.net
+wp14 ansible_ssh_host=vps297370.ovh.net
+wp24 ansible_ssh_host=vps297373.ovh.net
+wp15 ansible_ssh_host=vps297374.ovh.net
+wp25 ansible_ssh_host=vps297376.ovh.net
+wp16 ansible_ssh_host=vps297377.ovh.net
+wp26 ansible_ssh_host=vps297378.ovh.net
+db1 ansible_ssh_host=vps297380.ovh.net
+db2 ansible_ssh_host=vps297381.ovh.net
+
+[ansible-test]
+vps353396.ovh.net
+
+[linc-dev]
+srvdev.yhosting.lu
+
+[linc-corpo]
+srvbackup.linc.lu

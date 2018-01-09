@@ -1,0 +1,8 @@
+---
+
+- user:
+  name: padm-ddi
+  comment: "Dylan Dintrans"
+  uid: 65003
+  group: padm-usr
+  shell: /bin/bash
