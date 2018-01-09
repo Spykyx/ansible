@@ -1,3 +1,14 @@
+[linc-yellow]
+lb1 ansible_ssh_host=lb1.yellow.lu
+lb2 ansible_ssh_host=lb2.yellow.lu
+web0 ansible_ssh_host=web0.yellow.lu
+web1 ansible_ssh_host=web1.yellow.lu
+web2 ansible_ssh_host=web2.yellow.lu
+web3 ansible_ssh_host=web3.yellow.lu
+web4 ansible_ssh_host=web4.yellow.lu
+pg1 ansible_ssh_host=pg1.yellow.lu
+pg2 ansible_ssh_host=pg2.yellow.lu
+
 [linc-dp]
 wp11 ansible_ssh_host=vps297379.ovh.net
 wp21 ansible_ssh_host=vps297363.ovh.net
@@ -15,11 +26,14 @@ db1 ansible_ssh_host=vps297380.ovh.net
 db2 ansible_ssh_host=vps297381.ovh.net
 
 [ansible-test]
-vps353396.ovh.net
+support.linc.lu
 
 [linc-dev]
 srvdev.yhosting.lu
 srvbackup.linc.lu
+
+[linc-test]
+vps353396.ovh.net
 
 [linc-corpo]
 srvbackup.linc.lu
