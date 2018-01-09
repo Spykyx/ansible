@@ -1,0 +1,21 @@
+---
+- hosts: ansible-test
+  remote_user: padm-ans
+  become: true
+  tasks:
+    - name: create padm-ybr user
+      user:
+        name: padm-ybr
+        shell: /bin/bash
+        group: padm-usr
+        createhome: yes
+        state: present
+    - name: Copy bashrc file to client
+      copy: src=src/bashrc dest=/home/padm-ybr/.bashrc
+              owner=padm-ybr group=padm-usr mode=0644
+    - name : Create ssh directory
+      file: path=/home/padm-ybr/.ssh state=directory
+              owner=padm-ybr group=padm-usr mode=0700
+    - name: Copy sshkey file to client
+      copy: src=src/ssh_ybr dest=/home/padm-ybr/.ssh/authorized_keys
+              owner=padm-ybr group=padm-usr mode=0600

@@ -1,0 +1,20 @@
+---
+- hosts: linc-dev
+  remote_user: padm-ans
+  become: true
+  tasks:
+  - name: install common packages for all servers
+    yum: 
+      update_cache=yes
+      state=latest
+      name={{item}}
+    with_items: 
+    - curl
+    - htop
+    - tar
+    - unzip
+    - vim
+    - wget
+    - whois
+    - screen
+    - nano

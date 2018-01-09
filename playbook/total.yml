@@ -1,0 +1,30 @@
+---
+- hosts: linc-dev
+  remote_user: padm-ans
+  become: true
+  tasks:
+    - name: create padm-ddi user
+      user:
+        name: padm-ddi
+        shell: /bin/bash
+        group: padm-usr
+        createhome: yes
+        state: present
+    - name: Copy bashrc file to client
+      copy: src=src/bashrc dest=/home/padm-ddi/.bashrc
+              owner=padm-ddi group=padm-usr mode=0644
+    - name: install common packages for all servers
+      apt: 
+        update_cache=yes
+        state=latest
+        name={{item}}
+      with_items: 
+      - curl
+      - htop
+      - tar
+      - unzip
+      - vim
+      - wget
+      - whois
+      - screen
+      - nano
